@@ -1,0 +1,51 @@
+/*
+
+** 	The Blimp - Project Z 		 **
+** Open-source intelligent Robotic Blimp **
+
+Copyright (C) 2012 TONG Haowen Joel
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+@Name 		: TONG Haowen Joel
+@Organization 	: Singapore Academy for Young Engineers and Scientists (SAYES), Science Centre Singapore
+@Email 		: code {at} joeltong {dot} org
+@Project 	: The Z Project
+@Descr 		: This Arduino-based project is developed as an airship, known as a blimp.  It is uses 2 Arduinos, a wireless Xbee connection and can be loaded with addition sensors (in addition to the 2 sonar sensors on board).  The communication protocol has been designed in such a way to maximize communication using a minimal transfer of data.  Wireless non-blocking serial communication has been abstracted as "strings" (aka "sentences") rather than bits and bytes.  This enables one to "talk" to the blimp in terms of sentences, rather than fixed-length raw bytes.
+
+*/
+
+/* L293D.cpp */
+
+
+---------------------------------
+	     README
+---------------------------------
+
+DEPENDENCIES:
+	| Arduino-C Code
+		- Libraries
+			- String-Serial (https://github.com/toiletfreak/String-Serial)
+			- L293D driver library (https://github.com/toiletfreak/L293D)
+		
+	| PCB, Schematic, Prototyping layouts
+		- Fritzing (http://fritzing.org/)
+		
+
+INSTRUCTIONS:
+	- Construct the Blimp transmitter and receiver in accordance to given schematic (Tx and Rx).
+	- Upload relevant Arduino-C program to Tx and Rx.  Uncomment definitions in code, as necessary.
+	- Turn on the Blimp.
+	- Connect transmitter to computer.
+	- Connect to the transmitter using terminal or a relevant Serial interface program at 9600 baud.  If you are using a UNIX-based system such as Linux, I recommend using 'screen'.  e.g. 'screen /dev/ttyACM0 9600'
+	- Commands are as follow:
+		- 'q,w,e,a,s,d,z,x,c'	- controls direction of blimp motor thrusters.
+		- 'p'			- print status and sensor information of blimp
+		- '[,]'			- switch elevator rotor on / off
+		
+PORTING:
+	- It should be easy to adapt the Blimp schematics and code to a similarily-designed land / water based vehicle using a suitable replacement of parts.
