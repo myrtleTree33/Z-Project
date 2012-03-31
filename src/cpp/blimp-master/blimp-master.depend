@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1332125924 source:/home/joel/Documents/work/science-centre/arduino/blimp/cpp/blimp-master/master.cpp
+	<iostream>
+	<cstdio>
+	<ncurses.h>
+
