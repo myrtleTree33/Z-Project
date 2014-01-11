@@ -4,3 +4,13 @@
 	<cstdio>
 	<ncurses.h>
 
+1332126487 source:/home/joel/repos/Z-Project/src/cpp/blimp-master/master.cpp
+	<iostream>
+	<cstdio>
+	<ncurses.h>
+	<boost/asio.hpp>
+	<boost/ref.hpp>
+	<boost/bind.hpp>
+	<boost/lexical_cast.hpp>
+	<boost/date_time/posix_time/posix_time_types.hpp>
+
